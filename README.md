@@ -15,8 +15,8 @@ Os conceitos foram obtidos e aplicados através do curso de IoT (Internet-of-Thi
  - **MCU:** Espressif ESP32-Wroom Dev Module
 
 ## Projetos
-
-A tabela abaixo descreve os projetos desenvolvidos:
+- [Repositório completo - Wowki](https://wokwi.com/makers/figfelipe)
+- A tabela abaixo descreve os projetos desenvolvidos:
 
 | Nome | MCU | Descrição | Link |
 |------------------|--------|-----------|-----------------|

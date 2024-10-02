@@ -14,7 +14,7 @@ Os conceitos foram obtidos e aplicados através do curso de IoT (Internet-of-Thi
  - **IDE**: Arduino IDE 2.3.3
  - **MCU:** Espressif ESP32-Wroom Dev Module
 
-## Exemplos
+## Projetos
 
 A tabela abaixo descreve os projetos desenvolvidos:
 

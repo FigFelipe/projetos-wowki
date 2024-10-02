@@ -1,4 +1,4 @@
-# Projetos - Wowki Simulator
+# Projetos com ESP32 - Wowki Simulator
  Exemplos de projetos de IoT, utilizando o microcontrolador ESP32, simulado na plataforma Wowki Simulator.
 
 ## Autor

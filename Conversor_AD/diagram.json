@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "Felipe Figueiredo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": 72.04, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -116.5, "left": -38.6, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -85.64, "left": 48, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": -9.6, "left": -48.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot1:VCC", "vcc1:VCC", "red", [ "v19.2", "h37.6" ] ],
+    [ "gnd1:GND", "pot1:GND", "black", [ "v-9.6", "h19.2" ] ],
+    [ "pot1:SIG", "esp:VP", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

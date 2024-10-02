@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "author": "Felipe Figueiredo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": 244.84, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -135.7, "left": 143.8, "attrs": {} },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 61.6,
+      "left": 49.1,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 100.25,
+      "left": 123.4,
+      "rotate": 180,
+      "attrs": { "value": "470" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 129.05,
+      "left": 123.4,
+      "rotate": 180,
+      "attrs": { "value": "470" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 157.85,
+      "left": 123.4,
+      "rotate": 180,
+      "attrs": { "value": "470" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 182.4, "left": 57, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -95.24, "left": 249.6, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": -38.4, "left": 124.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot1:VCC", "vcc1:VCC", "red", [ "v19.2", "h66.4" ] ],
+    [ "pot1:GND", "gnd2:GND", "black", [ "v0" ] ],
+    [ "pot1:SIG", "esp:34", "green", [ "v0" ] ],
+    [ "r3:1", "esp:12", "green", [ "v0", "h28.8", "v-38.4" ] ],
+    [ "r2:1", "esp:14", "green", [ "v0" ] ],
+    [ "r1:1", "esp:27", "green", [ "v0" ] ],
+    [ "rgb1:COM", "gnd1:GND", "green", [ "v0" ] ],
+    [ "rgb1:R", "r3:2", "green", [ "v0" ] ],
+    [ "rgb1:G", "r2:2", "green", [ "v0" ] ],
+    [ "rgb1:B", "r1:2", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

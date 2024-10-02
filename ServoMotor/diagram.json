@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Felipe Figueiredo",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 33.64, "attrs": {} },
+    {
+      "type": "wokwi-servo",
+      "id": "servo1",
+      "top": -154.6,
+      "left": 126.6,
+      "rotate": 270,
+      "attrs": { "hornColor": "orange" }
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -37.64, "left": 240, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 9.6, "left": 162.6, "attrs": {} },
+    { "type": "wokwi-vcc", "id": "vcc2", "top": -104.84, "left": 38.4, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd2", "top": -38.4, "left": -58.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -145.3, "left": -48.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "servo1:V+", "vcc1:VCC", "green", [ "v19.2", "h28.9" ] ],
+    [ "gnd1:GND", "servo1:GND", "black", [ "h28.8", "v-9.6" ] ],
+    [ "esp:15", "servo1:PWM", "green", [ "v0", "h91.24" ] ],
+    [ "pot2:GND", "gnd2:GND", "black", [ "v38.4", "h-134.4" ] ],
+    [ "pot2:SIG", "esp:32", "green", [ "v0" ] ],
+    [ "vcc2:VCC", "pot2:VCC", "red", [ "v38.4", "h-38.4" ] ]
+  ],
+  "dependencies": {}
+}
